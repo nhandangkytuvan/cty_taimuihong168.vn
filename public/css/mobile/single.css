@@ -1,0 +1,52 @@
+.single h1{
+	text-align: center;
+	color: #333;
+	font-size: 16px;
+	margin-top: 30px;
+}
+.single .content-single{
+	padding: 10px 10px;
+	font-size: 14px;
+	padding-top: 0px;
+	line-height: 22px;
+}
+.single .content-single ol,.single .content-single ul{
+	list-style-position: inside;
+	padding-left: 0px;
+}
+.single .content-single p{
+	line-height: 22px;
+	text-align: justify;
+}
+.single .content-single img,.single .content-single figure{
+	display: block;
+	margin: 0px auto;
+}
+.single .crud{
+	margin-top:20px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	background-color: #008c56;
+	font-size: 13px;
+	padding-left: 10px;
+	overflow: hidden;
+	border-left: 5px solid #ff5649;
+}
+.single .list-post-quan-tam ul{
+	padding-left: 10px;
+	list-style: none;
+}
+.single .list-post-quan-tam ul li{
+	border-bottom: 1px solid #eee;
+	position: relative;
+}
+.single .list-post-quan-tam ul li a{
+	font-size: 13px;
+	display: inline-block;
+	padding: 6px 0px;
+	line-height: 20px;
+}
+.single .list-post-quan-tam ul li a img{
+	vertical-align: -5px;
+}
