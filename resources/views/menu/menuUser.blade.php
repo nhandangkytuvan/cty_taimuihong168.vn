@@ -45,7 +45,7 @@
     </div> 
     <div class="panel-collapse collapse in" id="menuOrder3"> 
         <ul class="list-group">
-            <li class="list-group-item"><a href="{{ url('user/setting/web') }}">
+            <li class="list-group-item"><a href="{{ url('user/setting/create') }}">
                 <i class="glyphicon glyphicon-home"></i> Web</a>
             </li>
         </ul>

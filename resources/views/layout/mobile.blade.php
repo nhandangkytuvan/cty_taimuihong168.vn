@@ -7,7 +7,7 @@
     @yield('title')
     <meta name="author" content="">
     @yield('keyword')
-    <link rel="shortcut icon" href="{{ asset('img/'.$setting_web['web_avatar']) }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('public/img/'.$setting->web_icon) }}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/global/font-awesome/css/font-awesome.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/global/jssor/jssor.css') }}">
 
@@ -81,7 +81,13 @@
                 <h2><a href="{{ MyAPI::getUrlTerm(28) }}">VÍ DỤ HỒI PHỤC</a></h2>
             </div>
             <div class="row flex flex-wrap">
-                
+                @foreach($post_hoiphucs as $post_hoiphuc)
+                    <div class="w50">
+                        <a href="{{ url($post_hoiphuc->post_alias.'/'.$post_hoiphuc->id.'.htm') }}">
+                            <img src="{{ asset('public/img/'.$post_hoiphuc->post_avatar) }}" class="img-responsive" alt="avuong"></a>
+                        <a href="{{ url($post_hoiphuc->post_alias.'/'.$post_hoiphuc->id.'.htm') }}">{{ $post_hoiphuc->post_name }}</a>
+                    </div>
+                @endforeach
             </div>
         </div>
         <div class="img-adv">

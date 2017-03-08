@@ -1,13 +1,12 @@
-@php $setting_web = json_decode($data['setting']->setting_web,true) @endphp
 @extends('layout.mobile')
 @section('title')
-	<title>{{ $data['post']->post_name }} - {{ $setting_web['web_name'] }}</title>
+	<title>{{ $data['post']->post_name }} - {{ $setting->web_name }}</title>
 @endsection('title')
 @section('keyword')
 @if($data['post']->post_avatar)
 <meta property="og:image" content="{{ asset('public/img/'.$data['post']->post_avatar) }}">
 @else
-<meta property="og:image" content="{{ asset('public/img/'.$setting_web['web_logo']) }}">
+<meta property="og:image" content="{{ asset('public/img/'.$setting->web_logo) }}">
 @endif
 <meta id="metaDescription" name="description" content="{{ $data['post']->post_description }}">
 <meta id="metaKeywords" name="keywords" content="{{ $data['post']->post_keyword }}">
@@ -57,33 +56,29 @@
 					</div>
 				</div>
 			</div>
+			@php 
+				$term = $data['post']->term;
+				$posts = $term->post()->where('id','<>',$data['post']->id)->limit(5)->get();
+			@endphp
+			@if(count($posts))
 			<div class="list-post-quan-tam">
 				<div class="tieu-de style1">
 					<h2><a>Bạn đọc lên quan tâm.</a></h2>
 				</div>
 				<div>
 					<ul>
+						@foreach($posts as $post)
 						<li>
-							<a href="#">
+							<a href="{{ asset($post->post_alias.'/'.$post->id.'.htm') }}">
 								<img src="{{ asset('public/images/mobile/icon-next.png') }}">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quas porro impedit.
+								{{ $post->post_name }}
 							</a>
 						</li>
-						<li>
-							<a href="#">
-								<img src="{{ asset('public/images/mobile/icon-next.png') }}">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quas porro impedit.
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="{{ asset('public/images/mobile/icon-next.png') }}">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quas porro impedit.
-							</a>
-						</li>
+						@endforeach
 					</ul>
 				</div>
 			</div>
+			@endif
 		</main>
 	</div>
 @endsection('content')

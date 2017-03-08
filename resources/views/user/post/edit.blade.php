@@ -78,7 +78,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Tóm tắt</label>
-                <textarea type="text" class="form-control" name="post_description" rows="3">{{ $data['post']->post_description }}</textarea>
+                <textarea type="text" class="form-control autosize" name="post_description">{{ $data['post']->post_description }}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Chi tiết 
@@ -116,7 +116,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Keyword</label>
-                <textarea type="text" class="form-control" name="post_keyword" rows="3">{{ $data['post']->post_keyword }}</textarea>
+                <textarea type="text" class="form-control autosize" name="post_keyword">{{ $data['post']->post_keyword }}</textarea>
             </div>
             <div class="form-group">
                 <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-edit"></span>  Sửa bài viết</button>

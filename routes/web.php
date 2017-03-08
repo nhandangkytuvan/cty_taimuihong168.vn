@@ -38,4 +38,6 @@ Route::group(['middleware' => ['check-user']], function () {
 	Route::any('user/term/index{query?}','User\TermController@index');
 	// setting
 	Route::any('user/setting/web', 'User\SettingController@web');
+	Route::any('user/setting/create', 'User\SettingController@create');
+	Route::any('user/setting/edit/{setting_id}', 'User\SettingController@edit');
 });
