@@ -51,4 +51,7 @@
         </ul>
     </div> 
 </div> 
-<a href="{{ url('/') }}" class="btn btn-success btn-block">www.taimuihong168.vn</a>
+<div>
+    <p><img src="{{ asset('public/img/'.$setting->web_logo) }}" class="img-responsive center-block"></p>
+    <a href="{{ url('/') }}" class="btn btn-success btn-block">www.taimuihong168.vn</a>
+</div>
