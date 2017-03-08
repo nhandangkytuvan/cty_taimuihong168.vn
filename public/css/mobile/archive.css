@@ -134,9 +134,11 @@
 	font-weight: normal;
 }
 .archive .entry-content p{
-	font-size: 13px;
+	font-size: 14px;
 	color: #444;
-	padding: 0px 5px;
+	line-height: 20px;
+	padding: 0px 8px;
+	text-align: justify;
 }
 .archive .entry-content p a.xem-them{
 	color: #ff5649;
